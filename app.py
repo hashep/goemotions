@@ -42,7 +42,7 @@ def classify_emotion(text):
 def create_vectorstore(user_text, emotion_label, goemotion_docs):
     user_doc = Document(page_content=f"일기 내용: {user_text}\n감정 분석: {emotion_label}")
     all_docs = goemotion_docs + [user_doc]
-    return FAISS.from_documents(all_docs, OpenAIEmbeddings())
+    return FAISS.from_documents(all_docs, OpenAIEmbeddings(openai_api_key=st.secrets["openai"]["api_key"]))
 
 def create_chatbot(vectorstore):
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
