@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain.embeddings import OpenAIEmbeddings
+from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain
@@ -8,6 +8,7 @@ from langchain.schema import Document
 from langchain.document_loaders import PyPDFLoader
 from transformers import pipeline
 from datasets import load_dataset
+
 
 emotion_classifier = pipeline(
     "text-classification",
