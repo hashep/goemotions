@@ -1,7 +1,8 @@
+streamlit
 langchain
 langchain-community
+faiss-cpu
 transformers
 datasets
 torch
-streamlit
-faiss-cpu
+pypdf
