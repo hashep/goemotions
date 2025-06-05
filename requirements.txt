@@ -1,5 +1,7 @@
-streamlit
-langchain>=0.0.200
+langchain
+langchain-community
 transformers
 datasets
+torch
+streamlit
 faiss-cpu
